@@ -9,7 +9,7 @@ namespace Models
     public class Animal
     {
         #region Constant
-        public readonly static string INSERT = "INSERT INTO Animal(Numero_Chip,Familia,Raca,Sexo,Nome) VALUES(@Numero,@Familia,@Raca,@Sexo,@Nome)";
+        public readonly static string INSERT = "INSERT INTO Animal(Numero_Chip,Familia,Raca,Sexo,Nome) VALUES(@Numero_Chip,@Familia,@Raca,@Sexo,@Nome);";
 
         public readonly static string SELECT = "SELECT Numero_Chip, Familia, Raca, Sexo, Nome FROM Animal";
         #endregion

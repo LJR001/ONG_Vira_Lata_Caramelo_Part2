@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Config;
 using Dapper;
 using Models;
 
@@ -12,6 +13,10 @@ namespace Repository
     public class AnimalRepository : IAnimalRepository
     {
         public string _conn;
+        public AnimalRepository()
+        {
+            _conn = DataBaseConfiguration.Get();
+        }
 
         public bool Add(Animal animal)
         {
