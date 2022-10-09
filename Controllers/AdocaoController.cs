@@ -8,5 +8,6 @@ namespace Controllers
 {
     internal class AdocaoController
     {
+
     }
 }

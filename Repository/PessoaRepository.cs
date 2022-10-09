@@ -10,42 +10,42 @@ using Models;
 
 namespace Repository
 {
-    public class AnimalRepository : IAnimalRepository
+    public class PessoaRepository : IPessoaRepository
     {
         public string _conn;
-        public AnimalRepository()
+
+        public PessoaRepository()
         {
             _conn = DataBaseConfiguration.Get();
         }
-
-        public bool Add(Animal animal)
+        public bool Add(Pessoa pessoa)
         {
             bool result = false;
             using (var db = new SqlConnection(_conn))
             {
                 db.Open();
-                db.Execute(Animal.INSERT, animal);
+                db.Execute(Pessoa.INSERT, pessoa);
                 result = true;
             }
             return true;
         }
-
-        public List<Animal> GetAll()
-        {
-            using(var db = new SqlConnection(_conn))
+        public List<Pessoa> GetAll()
+        {   
+            using (var db = new SqlConnection(_conn))
             {
                 db.Open();
-                var animal = db.Query<Animal>(Animal.SELECT);
-                return (List<Animal>)animal;
+                var pessoa = db.Query<Pessoa>(Pessoa.SELECT);
+                return (List<Pessoa>)pessoa;
             }
+
         }
-        public bool Delete(Animal animal)
+        public bool Delete(Pessoa pessoa)
         {
             bool result = false;
             using (var db = new SqlConnection(_conn))
             {
                 db.Open();
-                db.Execute(Animal.DELETE, animal);
+                db.Execute(Pessoa.DELETE, pessoa);
                 result = true;
             }
             return true;

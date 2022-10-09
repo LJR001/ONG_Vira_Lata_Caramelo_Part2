@@ -12,6 +12,8 @@ namespace Models
         public readonly static string INSERT = "INSERT INTO Animal(Numero_Chip,Familia,Raca,Sexo,Nome) VALUES(@Numero_Chip,@Familia,@Raca,@Sexo,@Nome);";
 
         public readonly static string SELECT = "SELECT Numero_Chip, Familia, Raca, Sexo, Nome FROM Animal";
+
+        public readonly static string DELETE = "DELETE FROM Animal WHERE Numero_Chip = @Numero_Chip";
         #endregion
 
         #region Properties

@@ -15,6 +15,16 @@ namespace Controllers
             new AnimalService().Add(animal);
             return animal;
         }
-        
+        static public void ImprimirAnimal()
+        {
+            new AnimalService().GetAll().ForEach(x => Console.WriteLine(x));
+        }
+        static public Animal DeletarAnimal(Animal animal)
+        {
+            new AnimalService().Delete(animal);
+            return animal;
+        }
+
+       
     }
 }

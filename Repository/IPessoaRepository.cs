@@ -7,11 +7,11 @@ using Models;
 
 namespace Repository
 {
-    public interface IAnimalRepository
+    public interface IPessoaRepository
     {
-        bool Add(Animal animal);
-        List<Animal> GetAll();
+        bool Add(Pessoa animal);
+        List<Pessoa> GetAll();
 
-        bool Delete(Animal animal);
+        bool Delete(Pessoa animal);
     }
 }
