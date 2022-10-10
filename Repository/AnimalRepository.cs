@@ -50,5 +50,16 @@ namespace Repository
             }
             return true;
         }
+       public bool Update(Animal animal)
+        {
+            bool result = false;
+            using(var db = new SqlConnection(_conn))
+            {
+                db.Open();
+                db.Execute(Animal.UPDATE, animal);
+                result = true;
+            }
+            return result;
+        }
     }
 }

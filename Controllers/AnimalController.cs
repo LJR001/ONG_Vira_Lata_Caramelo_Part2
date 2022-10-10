@@ -24,6 +24,17 @@ namespace Controllers
             new AnimalService().Delete(animal);
             return animal;
         }
+        static public Animal SelectAnimal(int id)
+        {
+            
+            var animal = new AnimalService().GetAll().Where(item =>item.Numero_Chip == id).First();
+                      
+            return animal;
+        }
+        static public void EditarAnimal(Animal animal)
+        {
+            new AnimalService().Update(animal);
+        }
 
        
     }

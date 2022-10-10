@@ -27,5 +27,9 @@ namespace Services
         {
             return (_animalRepository.Delete(animal));
         }
+        public bool Update(Animal animal)
+        {
+            return !_animalRepository.Update(animal);
+        }
     }
 }

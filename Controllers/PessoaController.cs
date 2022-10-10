@@ -24,5 +24,15 @@ namespace Controllers
             new PessoaService().Delete(pessoa);
             return pessoa;
         }
+        static public Pessoa SelectPessoa(string id)
+        {
+            var pessoa = new PessoaService().GetAll().Where(item=>item.CPF==id).First();
+
+            return pessoa;
+        }
+        static public void EditarPessoa(Pessoa pessoa)
+        {
+            new PessoaService().Update(pessoa);
+        }
     }
 }

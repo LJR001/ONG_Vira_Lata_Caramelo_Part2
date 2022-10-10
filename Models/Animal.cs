@@ -14,6 +14,8 @@ namespace Models
         public readonly static string SELECT = "SELECT Numero_Chip, Familia, Raca, Sexo, Nome FROM Animal";
 
         public readonly static string DELETE = "DELETE FROM Animal WHERE Numero_Chip = @Numero_Chip";
+
+        public readonly static string UPDATE = "UPDATE Animal SET Familia = @Familia, Raca=@Raca, Sexo=@Sexo,Nome=@Nome WHERE Numero_Chip = @Numero_Chip";
         #endregion
 
         #region Properties

@@ -11,7 +11,7 @@ namespace Repository
     {
         bool Add(Animal animal);
         List<Animal> GetAll();
-
         bool Delete(Animal animal);
+        bool Update(Animal animal);
     }
 }

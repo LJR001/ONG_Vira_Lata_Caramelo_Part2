@@ -27,5 +27,9 @@ namespace Services
         {
             return _pessoaRepository.Delete(pessoa);
         }
+        public bool Update(Pessoa pessoa)
+        {
+            return (_pessoaRepository.Update(pessoa));
+        }
     }
 }

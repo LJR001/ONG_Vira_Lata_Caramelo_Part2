@@ -50,5 +50,16 @@ namespace Repository
             }
             return true;
         }
+        public bool Update(Pessoa pessoa)
+        {
+            bool result = false;
+            using (var db = new SqlConnection(_conn))
+            {
+                db.Open();
+                db.Execute(Pessoa.UPDATE, pessoa);
+                result = true;
+            }
+            return result;
+        }
     }
 }

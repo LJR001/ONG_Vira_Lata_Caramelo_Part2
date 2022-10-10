@@ -11,6 +11,9 @@ namespace Models
         public readonly static string SELECT = "SELECT CPF,Nome,Sexo,Data_Nascimento,Telefone, Logradouro, Numero, Bairro, Cidade, Estado, CEP FROM Pessoa";
 
         public readonly static string DELETE = "DELETE FROM Pessoa WHERE CPF = @CPF";
+
+        public readonly static string UPDATE = "UPDATE Pessoa SET Nome = @Nome, Sexo = @Sexo, Telefone = @Telefone, Logradouro = @Logradouro,Numero = @Numero, Bairro = @Bairro, Cidade=@Cidade, Estado=@Estado,CEP=@CEP";
+
         #endregion
 
         #region Properties
